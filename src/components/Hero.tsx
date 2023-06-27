@@ -40,9 +40,8 @@ export default function Hero() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   const parallaxHeight = 1050;
-
+  
   return (
     <div className="parallax-wrapper">
       <div className="parallax-container">

@@ -13,6 +13,10 @@ $title-font: "Comfortaa", cursive;
 $main-background: $shadow-purple;
 
 // GENERAL
+h1 {
+  font-family: $title-font;
+  color: $text-color;
+}
 body {
   background: $night-gradient;
   background-color: $shadow-purple;
@@ -34,6 +38,23 @@ button {
   font: inherit;
   font-family: inherit;
   cursor: pointer;
+}
+
+// LANDING
+.landing {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: $shadow-purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .spinner {
+    color: $text-color;
+    font-size: 2rem;
+  }
 }
 
 // NAV
