@@ -3,6 +3,8 @@ import stars from "../assets/stars.png";
 import moon from "../assets/moon.png";
 import mountainFront from "../assets/mountains_front.png";
 import mountainBack from "../assets/mountains_behind.png";
+import welcome from "../assets/welcome.svg";
+import { ReactSVG } from "react-svg";
 
 export default function Hero() {
   const parallaxLayersRef = useRef<NodeListOf<HTMLElement> | null>(null);
@@ -23,10 +25,9 @@ export default function Hero() {
             const translateValue = scrollTop * depth;
             const rotateValue = translateValue * -0.4; // vertical height
             layer.style.transform = `translateY(${translateValue}px) rotate(${rotateValue}deg)`;
-          } else if (layer.classList.contains("hello")) {
+          } else if (layer.classList.contains("welcome")) {
             const translateValue = scrollTop * depth;
-            const translateXValue = translateValue * -0.4; // horizontal movement
-            layer.style.transform = `translate3d(${translateXValue * 2}px, ${translateValue / 3}px, 0)`;
+            layer.style.transform = `translate3d(${-translateValue}px, ${translateValue}px, 0)`;
           } else {
             const translateValue = scrollTop * depth;
             layer.style.transform = `translate3d(0, ${translateValue}px, 0)`;
@@ -41,7 +42,32 @@ export default function Hero() {
     };
   }, []);
   const parallaxHeight = 1050;
-  
+
+  function setTextAnimation(
+    delay: number,
+    duration: number,
+    strokeWidth: number,
+    timingFunction: string,
+    strokeColor: string,
+    repeat: boolean
+  ) {
+    const paths = document.querySelectorAll("path");
+    const mode = repeat ? "infinite" : "forwards";
+    for (let i = 0; i < paths.length; i++) {
+      const path = paths[i];
+      const length = path.getTotalLength();
+      path.style["stroke-dashoffset"] = `${length}px`;
+      path.style["stroke-dasharray"] = `${length}px`;
+      path.style["stroke-width"] = `${strokeWidth}px`;
+      path.style["stroke"] = `${strokeColor}`;
+      path.style[
+        "animation"
+      ] = `${duration}s svg-text-anim ${mode} ${timingFunction}`;
+      path.style["animation-delay"] = `${i * delay}s`;
+    }
+  }
+  setTextAnimation(0.1, 2.7, 1, "linear", "#ffffff", false);
+
   return (
     <div className="parallax-wrapper">
       <div className="parallax-container">
@@ -66,9 +92,11 @@ export default function Hero() {
           height={parallaxHeight}
           parallax-depth="0.4"
         />
-        <div className="parallax-layer hello" parallax-depth="1">
-          Hello **NAME**
-        </div>
+        <ReactSVG
+          className="parallax-layer welcome"
+          src={welcome}
+          parallax-depth="0.4"
+        />
         <img
           className="parallax-layer mountain-front"
           src={mountainFront}
