@@ -37,32 +37,40 @@ export default function Hero() {
     };
   }, []);
 
+  const parallaxHeight = 1050;
+
   return (
-    <div className="parallax-container">
-      <img
-        className="parallax-layer stars"
-        src={stars}
-        alt="stars"
-        parallax-depth="0.1"
-      />
-      <img
-        className="parallax-layer moon"
-        src={moon}
-        alt="moon"
-        parallax-depth="1"
-      />
-      <img
-        className="parallax-layer mountain-front"
-        src={mountainBack}
-        alt="mountain back"
-        parallax-depth="0.4"
-      />
-      <img
-        className="parallax-layer mountain-front"
-        src={mountainFront}
-        alt="mountain front"
-        parallax-depth="0"
-      />
+    <div className="parallax-wrapper">
+      <div className="parallax-container">
+        <img
+          className="parallax-layer stars"
+          src={stars}
+          alt="stars"
+          height={parallaxHeight}
+          parallax-depth="0.1"
+        />
+        <img
+          className="parallax-layer moon"
+          src={moon}
+          alt="moon"
+          height={parallaxHeight}
+          parallax-depth="1"
+        />
+        <img
+          className="parallax-layer mountain-back"
+          src={mountainBack}
+          alt="mountain back"
+          height={parallaxHeight}
+          parallax-depth="0.4"
+        />
+        <img
+          className="parallax-layer mountain-front"
+          src={mountainFront}
+          alt="mountain front"
+          height={parallaxHeight}
+          parallax-depth="0"
+        />
+      </div>
     </div>
   );
 }
