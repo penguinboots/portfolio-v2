@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import stars from "../assets/stars.png";
 import moon from "../assets/moon.png";
 import mountainFront from "../assets/mountains_front.png";
@@ -7,8 +7,8 @@ import welcome from "../assets/welcome.svg";
 import { ReactSVG } from "react-svg";
 
 export default function Hero() {
+  // Parallax effect
   const parallaxLayersRef = useRef<NodeListOf<HTMLElement> | null>(null);
-
   useEffect(() => {
     parallaxLayersRef.current = document.querySelectorAll(".parallax-layer");
 
@@ -43,6 +43,7 @@ export default function Hero() {
   }, []);
   const parallaxHeight = 1050;
 
+  // Text animation
   function setTextAnimation(
     delay: number,
     duration: number,
@@ -66,6 +67,17 @@ export default function Hero() {
       path.style.animationDelay = `${i * delay}s`;
     }
   }
+
+  // Run animation after element is loaded in
+  const [isRendered, setIsRendered] = useState(false);
+  useEffect(() => {
+    setIsRendered(true);
+  }, []);
+  useEffect(() => {
+    if (isRendered) {
+      setTextAnimation(0.1, 2.7, 1, "linear", "#ffffff", false);
+    }
+  }, [isRendered]);
   setTextAnimation(0.1, 2.7, 1, "linear", "#ffffff", false);
 
   return (
