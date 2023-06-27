@@ -1,13 +1,16 @@
 // VARIABLES
 $translucent-white: rgb(255, 255, 255, 0.8);
-$opaque-white: rgb(255, 255, 255);
+$opaque-white: #ffffff;
 $light-purple: #b1a4d3;
+$shadow-purple: #1e1431;
 
 $night-gradient: linear-gradient(#2b1055, #7597de);
 
 $text-color: $translucent-white;
 $highlight-color: $opaque-white;
 $title-font: "Comfortaa", cursive;
+
+$main-background: $shadow-purple;
 
 // GENERAL
 body {
@@ -39,6 +42,7 @@ button {
   z-index: 99;
   color: $text-color;
   width: 100%;
+  padding: 2rem 3rem;
 }
 .nav-bar {
   display: flex;
@@ -102,7 +106,8 @@ button {
     top: 0;
   }
 }
-.parallax-container::before { // Gradient overlay effect
+.parallax-container::before {
+  // Gradient overlay effect
   content: "";
   position: absolute;
   bottom: 0;
@@ -116,5 +121,39 @@ button {
 // FOR TESTING
 .placeholder {
   height: 100vh;
-  background-color: rgba(30, 20, 49, 255);
+  background-color: $main-background;
+}
+
+// HAMBURGER MENU
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 98;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(25, 14, 61, 1) 40%
+  );
+
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(25, 14, 61, 1) 30%
+    );
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media only screen and (min-width: 1025px) {
+    width: 40%;
+  }
+}
+.menu-wrapper.closed {
+  opacity: 0;
 }
