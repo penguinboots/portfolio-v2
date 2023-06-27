@@ -70,14 +70,15 @@ export default function Hero() {
 
   // Run animation after element is loaded in
   const [isRendered, setIsRendered] = useState(false);
+  
   useEffect(() => {
     setIsRendered(true);
   }, []);
+
   useEffect(() => {
-    if (isRendered) {
-      setTextAnimation(0.1, 2.7, 1, "linear", "#ffffff", false);
-    }
+    setTextAnimation(0.1, 2.7, 1, "linear", "#ffffff", false);
   }, [isRendered]);
+
   setTextAnimation(0.1, 2.7, 1, "linear", "#ffffff", false);
 
   return (
