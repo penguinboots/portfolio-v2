@@ -5,11 +5,11 @@ import Placeholder from './components/Placeholder'
 
 function App() {
   return (
-    <>
+    <body>
       <Navbar/>
       <Hero />
       <Placeholder />
-    </>
+    </body>
   )
 }
 

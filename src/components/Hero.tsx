@@ -1,28 +1,32 @@
-import React, { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import stars from "../assets/stars.png";
 import moon from "../assets/moon.png";
 import mountainFront from "../assets/mountains_front.png";
 import mountainBack from "../assets/mountains_behind.png";
 
 export default function Hero() {
+  const parallaxLayersRef = useRef<NodeListOf<HTMLElement> | null>(null);
+
   useEffect(() => {
+    parallaxLayersRef.current = document.querySelectorAll(".parallax-layer");
+
     const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY;
+      if (parallaxLayersRef.current) {
+        for (let i = 0; i < parallaxLayersRef.current.length; i++) {
+          const layer = parallaxLayersRef.current[i];
+          const depth = parseFloat(
+            layer.getAttribute("parallax-depth") as string
+          );
 
-      const parallaxLayers = document.querySelectorAll(".parallax-layer");
-
-      for (let i = 0; i < parallaxLayers.length; i++) {
-        const layer = parallaxLayers[i];
-        const depth = parseFloat(layer.getAttribute("parallax-depth"));
-
-        if (layer.classList.contains("stars")) {
-          const translateValue = scrollTop * depth;
-          const rotateValue = translateValue * -0.8; // vertical height
-          layer.style.transform = `translateY(${translateValue}px) rotate(${rotateValue}deg)`;
-        } else {
-          const translateValue = scrollTop * depth;
-          layer.style.transform = `translate3d(0, ${translateValue}px, 0)`;
+          if (layer.classList.contains("stars")) {
+            const translateValue = scrollTop * depth;
+            const rotateValue = translateValue * -0.4; // vertical height
+            layer.style.transform = `translateY(${translateValue}px) rotate(${rotateValue}deg)`;
+          } else {
+            const translateValue = scrollTop * depth;
+            layer.style.transform = `translate3d(0, ${translateValue}px, 0)`;
+          }
         }
       }
     };
@@ -35,18 +39,30 @@ export default function Hero() {
 
   return (
     <div className="parallax-container">
-      <div className="parallax-layer stars" parallax-depth="0.1">
-        <img src={stars} alt="stars" />
-      </div>
-      <div className="parallax-layer moon" parallax-depth="1">
-        <img src={moon} alt="moon" />
-      </div>
-      <div className="parallax-layer" parallax-depth="0.4">
-        <img src={mountainBack} alt="mountain back" />
-      </div>
-      <div className="parallax-layer" parallax-depth="0">
-        <img src={mountainFront} alt="mountain front" />
-      </div>
+      <img
+        className="parallax-layer stars"
+        src={stars}
+        alt="stars"
+        parallax-depth="0.1"
+      />
+      <img
+        className="parallax-layer moon"
+        src={moon}
+        alt="moon"
+        parallax-depth="1"
+      />
+      <img
+        className="parallax-layer mountain-front"
+        src={mountainBack}
+        alt="mountain back"
+        parallax-depth="0.4"
+      />
+      <img
+        className="parallax-layer mountain-front"
+        src={mountainFront}
+        alt="mountain front"
+        parallax-depth="0"
+      />
     </div>
   );
 }
