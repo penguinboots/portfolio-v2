@@ -10,26 +10,37 @@ import stars from "./assets/stars.png";
 import moon from "./assets/moon.png";
 import mountainFront from "./assets/mountains_front.png";
 import mountainBack from "./assets/mountains_behind.png";
+import welcome from "./assets/welcome.svg"
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const images = [stars, moon, mountainFront, mountainBack];
+useEffect(() => {
+  const images = [stars, moon, mountainFront, mountainBack, welcome];
 
-    const imagePromises = images.map((imageUrl) => {
-      return new Promise<void>((resolve) => {
+  const imagePromises = images.map((imageUrl) => {
+    return new Promise<void>((resolve) => {
+      if (typeof imageUrl === "string") {
         const img = new Image();
         img.onload = () => resolve();
         img.src = imageUrl;
-      });
+      } else {
+        const svgUrl = URL.createObjectURL(imageUrl);
+        const img = new Image();
+        img.onload = () => {
+          URL.revokeObjectURL(svgUrl);
+          resolve();
+        };
+        img.src = svgUrl;
+      }
     });
+  });
 
-    Promise.all(imagePromises).then(() => {
-      setLoading(false);
-    });
-  }, []);
+  Promise.all(imagePromises).then(() => {
+    setLoading(false);
+  });
+}, []);
 
   return (
     <div className="app-wrapper">
