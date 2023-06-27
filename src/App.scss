@@ -13,6 +13,9 @@ $title-font: "Comfortaa", cursive;
 $main-background: $shadow-purple;
 
 // GENERAL
+html {
+  scroll-behavior: smooth;
+}
 h1 {
   font-family: $title-font;
   color: $text-color;
