@@ -1,5 +1,3 @@
-import wave from "../assets/wave.svg";
-
 interface MenuProps {
   menuOpen: boolean;
 }

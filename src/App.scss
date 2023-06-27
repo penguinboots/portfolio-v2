@@ -15,6 +15,7 @@ $main-background: $shadow-purple;
 // GENERAL
 body {
   background: $night-gradient;
+  background-color: $shadow-purple;
 }
 ul {
   list-style-type: none;
@@ -105,6 +106,23 @@ button {
     mix-blend-mode: screen;
     top: 0;
   }
+  .hello {
+    color: $text-color;
+    font-family: $title-font;
+    font-weight: 700;
+    font-size: 3rem;
+    top: 40%;
+    left: 70%;
+    height: 30px;
+    @media only screen and (min-width: 320px) and (max-width: 1140px) {
+      left: 100%;
+      top: 50%;
+    }
+    @media only screen and (min-width: 1140px) and (max-width: 1620px) {
+      left: 80%;
+      top: 45%;
+    }
+  }
 }
 .parallax-container::before {
   // Gradient overlay effect
@@ -116,12 +134,6 @@ button {
   height: 50%;
   background: linear-gradient(to top, rgba(30, 20, 49, 255), transparent);
   z-index: 1;
-}
-
-// FOR TESTING
-.placeholder {
-  height: 100vh;
-  background-color: $main-background;
 }
 
 // HAMBURGER MENU
@@ -156,4 +168,10 @@ button {
 }
 .menu-wrapper.closed {
   opacity: 0;
+}
+
+// TEST SECTION
+.placeholder {
+  height: 100vh;
+  background-color: $main-background;
 }

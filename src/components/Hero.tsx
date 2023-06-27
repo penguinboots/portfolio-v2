@@ -23,6 +23,10 @@ export default function Hero() {
             const translateValue = scrollTop * depth;
             const rotateValue = translateValue * -0.4; // vertical height
             layer.style.transform = `translateY(${translateValue}px) rotate(${rotateValue}deg)`;
+          } else if (layer.classList.contains("hello")) {
+            const translateValue = scrollTop * depth;
+            const translateXValue = translateValue * -0.4; // horizontal movement
+            layer.style.transform = `translate3d(${translateXValue * 2}px, ${translateValue / 3}px, 0)`;
           } else {
             const translateValue = scrollTop * depth;
             layer.style.transform = `translate3d(0, ${translateValue}px, 0)`;
@@ -63,6 +67,9 @@ export default function Hero() {
           height={parallaxHeight}
           parallax-depth="0.4"
         />
+        <div className="parallax-layer hello" parallax-depth="1">
+          Hello **NAME**
+        </div>
         <img
           className="parallax-layer mountain-front"
           src={mountainFront}
