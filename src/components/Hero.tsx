@@ -55,7 +55,7 @@ export default function Hero() {
     const paths = document.querySelectorAll("#welcome path");
     const mode = repeat ? "infinite" : "forwards";
     for (let i = 0; i < paths.length; i++) {
-      const path = paths[i];
+      const path = paths[i] as SVGPathElement;
       const length = path.getTotalLength();
       path.style.strokeDashoffset = `${length}px`;
       path.style.strokeDasharray = `${length}px`;
@@ -70,7 +70,7 @@ export default function Hero() {
 
   // Run animation after element is loaded in
   const [isRendered, setIsRendered] = useState(false);
-  
+
   useEffect(() => {
     setIsRendered(true);
   }, []);
