@@ -21,6 +21,9 @@ h1 {
   font-family: $flavour-font;
   color: $text-color;
 }
+h2 {
+  font-family: $title-font;
+}
 body {
   background: $night-gradient;
   background-color: $shadow-purple;
@@ -233,8 +236,92 @@ button {
   pointer-events: none;
 }
 
+// INTRO
+
+.intro {
+  background-color: $shadow-purple;
+  color: $text-color;
+  .intro-text {
+    width: 85%;
+    height: 40rem;
+    margin: auto;
+    padding-top: 2rem;
+    .typewriter {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .typed {
+        text-align: center;
+        color: #9e9fe0;
+        margin-left: 0.4rem;
+      }
+    }
+    .heart {
+      font-size: 3rem;
+      color: #7b7cd0;
+      width: 100%;
+      margin: 2rem 0;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 80%;
+      h1 {
+        font-size: 2.5rem;
+        line-height: 2rem;
+        margin: 2rem 0;
+      }
+      h2 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 2rem;
+        margin: 0.7rem 0;
+      }
+      .typed {
+        min-width: 4.3rem;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 80%;
+      h1 {
+        font-size: 4rem;
+        margin: 2rem 0;
+      }
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 0.8rem 0;
+      }
+      .typed {
+        min-width: 6.5rem;
+      }
+      .heart {
+        font-size: 5rem;
+      }
+    }
+    @media only screen and (min-width: 1025px) {
+      width: 70%;
+      h1 {
+        font-size: 6rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin: 0.5rem 0;
+      }
+      .typed {
+        min-width: 8.1rem;
+      }
+      .heart {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
 // TEST SECTION
 .placeholder {
   height: 100vh;
-  background-color: $main-background;
+  // background-color: $main-background;
+  width: 100%;
+  overflow: hidden;
 }
