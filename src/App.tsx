@@ -50,7 +50,7 @@ useEffect(() => {
       <Hero />
       <Menu menuOpen={menuOpen} />
       <Intro />
-      <Placeholder color="#7597de" />
+      <Placeholder/>
     </div>
   );
 }
