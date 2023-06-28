@@ -3,6 +3,8 @@ $translucent-white: rgb(255, 255, 255, 0.8);
 $opaque-white: #ffffff;
 $light-purple: #b1a4d3;
 $shadow-purple: #1e1431;
+$med-warm-purple: #734588;
+$light-warm-purple: #b984d2;
 
 $night-gradient: linear-gradient(#2b1055, #7597de);
 
@@ -14,9 +16,6 @@ $flavour-font: "Lobster", cursive;
 $main-background: $shadow-purple;
 
 // GENERAL
-html {
-  scroll-behavior: smooth;
-}
 h1 {
   font-family: $flavour-font;
   color: $text-color;
@@ -78,38 +77,29 @@ button {
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  font-family: $title-font;
-  font-weight: 700;
-  max-width: 1800px;
+  font-family: $flavour-font;
+  max-width: 1600px;
   .left-nav {
     display: flex;
     align-items: center;
     justify-content: center;
     .logo {
-      font-size: 3rem;
+      font-size: 2rem;
       padding-top: 0.3rem;
     }
     .logo:hover {
       color: $highlight-color;
+      transition: all 0.4s;
     }
   }
-  .nav-links {
-    display: flex;
-    padding: 0 1rem;
-    .nav-item {
-      padding: 0 2rem;
-      font-size: 1.3rem;
-    }
-    .nav-item:hover {
-      color: $highlight-color;
-    }
-    .nav-divider {
-      font-size: 1.3rem;
-    }
-    svg {
-      width: 0.7rem;
-      padding-left: 0.2rem;
-    }
+  .hamburger-react:hover {
+    color: $highlight-color;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 95%;
   }
 }
 
@@ -158,9 +148,8 @@ button {
     }
   }
 }
-
-// Gradient Overlay
 .parallax-container::before {
+  // Gradient overlay
   content: "";
   position: absolute;
   bottom: 0;
@@ -171,8 +160,8 @@ button {
   z-index: 1;
 }
 
-// SVG Animation
 @-webkit-keyframes svg-text-anim {
+  // Welcome SVG animation
   40% {
     stroke-dashoffset: 0;
     fill: transparent;
@@ -237,28 +226,29 @@ button {
 }
 
 // INTRO
-
 .intro {
   background-color: $shadow-purple;
   color: $text-color;
-  .intro-text {
-    width: 85%;
-    height: 40rem;
+  .intro-content {
+    display: flex;
+    flex-direction: column;
     margin: auto;
-    padding-top: 2rem;
+    .intro-body {
+      display: flex;
+      flex-direction: column;
+    }
     .typewriter {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
       .typed {
         text-align: center;
-        color: #9e9fe0;
-        margin-left: 0.4rem;
+        color: $light-warm-purple;
+        margin-left: 0.7rem;
       }
     }
     .heart {
       font-size: 3rem;
-      color: #7b7cd0;
+      color: $light-warm-purple;
       width: 100%;
       margin: 2rem 0;
     }
@@ -276,12 +266,21 @@ button {
         margin: 0.7rem 0;
       }
       .typed {
-        min-width: 4.4rem;
+        min-width: 4.5rem;
+        font-weight: 700;
+      }
+      .upper {
+        display: none;
       }
     }
-
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       width: 80%;
+      height: 45rem;
+      padding-top: 6rem;
+      align-items: center;
+      .intro-body {
+        align-items: center;
+      }
       h1 {
         font-size: 4rem;
         margin: 2rem 0;
@@ -290,38 +289,60 @@ button {
         font-size: 2rem;
         font-weight: 400;
         margin: 0.8rem 0;
+        text-align: center;
       }
       .typed {
-        min-width: 6.5rem;
+        min-width: 6.6rem;
+        font-weight: 700;
       }
       .heart {
         font-size: 5rem;
+      }
+      .upper {
+        display: none;
       }
     }
     @media only screen and (min-width: 1025px) {
       width: 70%;
+      height: 40rem;
+      padding-top: 6rem;
+      .intro-title {
+        display: flex;
+        align-items: center;
+      }
+      .intro-body {
+        margin-left: 9.5rem;
+      }
       h1 {
-        font-size: 6rem;
+        font-size: 4rem;
       }
       h2 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         font-weight: 300;
-        margin: 0.5rem 0;
+        margin: 0.3rem;
       }
       .typed {
-        min-width: 8.1rem;
+        min-width: 5.9rem;
+        font-weight: 700;
       }
       .heart {
+        width: 10rem;
         font-size: 5rem;
+      }
+      .lower {
+        display: none;
       }
     }
   }
 }
 
-// TEST SECTION
-.placeholder {
+// ABOUT
+.about {
   height: 100vh;
-  // background-color: $main-background;
   width: 100%;
   overflow: hidden;
+  .wave svg {
+    height: auto;
+    width: 100%;
+  }
 }

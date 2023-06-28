@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
       <nav className="nav-bar">
         <div className="left-nav">
           <div className="logo">
-            <Link to="app-wrapper" spy={true} smooth={true} duration={500}>
+            <Link to="app-wrapper" spy={true} smooth={true} duration={1000}>
               SW
             </Link>
           </div>
