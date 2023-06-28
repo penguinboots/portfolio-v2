@@ -52,7 +52,7 @@ export default function Hero() {
     strokeColor: string,
     repeat: boolean
   ) {
-    const paths = document.querySelectorAll("path");
+    const paths = document.querySelectorAll("#welcome path");
     const mode = repeat ? "infinite" : "forwards";
     for (let i = 0; i < paths.length; i++) {
       const path = paths[i];
