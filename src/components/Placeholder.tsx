@@ -4,7 +4,7 @@ import { ReactSVG } from "react-svg";
 
 export default function Placeholder() {
   return (
-    <div className="placeholder" style={{backgroundColor: colour}}>
+    <div className="placeholder">
       <ReactSVG
         src={wave}
       />
