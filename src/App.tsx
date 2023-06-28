@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Placeholder from "./components/Placeholder";
 import Menu from "./components/Menu";
 import Landing from "./components/Landing";
 
@@ -12,6 +11,7 @@ import mountainFront from "./assets/mountains_front.png";
 import mountainBack from "./assets/mountains_behind.png";
 import welcome from "./assets/welcome.svg"
 import Intro from "./components/Intro";
+import About from "./components/About";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ useEffect(() => {
       <Hero />
       <Menu menuOpen={menuOpen} />
       <Intro />
-      <Placeholder/>
+      <About/>
     </div>
   );
 }
