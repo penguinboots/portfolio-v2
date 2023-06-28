@@ -1,11 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { ReactSVG } from "react-svg";
+
+import glow from "../assets/glow_balls.svg";
 
 import { TypeAnimation } from "react-type-animation";
 
 export default function Intro() {
   return (
     <div className="intro">
+      <ReactSVG className="glow" src={glow} />
       <div className="intro-content">
         <div className="intro-title">
           <FontAwesomeIcon className="heart upper" icon={faHeart} beat />
