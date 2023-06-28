@@ -77,6 +77,11 @@ button {
   color: $text-color;
   width: 100%;
   padding: 2rem 3rem;
+  transition: transform 0.5s ease;
+  transform: translateY(0);
+}
+.nav-wrapper.hidden {
+  transform: translateY(-100%);
 }
 .nav-bar {
   display: flex;
@@ -378,7 +383,7 @@ button {
     }
   }
   .about-content {
-    margin: auto;
+    margin: 0 auto 4rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -388,7 +393,7 @@ button {
     .card-container {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 2rem;
     }
     .card {
       display: flex;
@@ -416,12 +421,24 @@ button {
         color: rgb(55, 55, 55);
       }
     }
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .photo {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      margin: 2rem;
+      border: 4px solid #ffffff70;
+    }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
       width: 100%;
-      margin-top: 3rem;
       h2 {
         font-size: 1.8rem;
-        margin: 2rem;
+        margin: 1rem;
       }
       .card-container {
         flex-direction: column;
@@ -434,11 +451,16 @@ button {
           }
         }
       }
+      .photo {
+        width: 70%;
+        height: auto;
+      }
+      .photo.bottom {
+        display: none;
+      }
     }
-
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       width: 100%;
-      margin-top: 2rem;
       h2 {
         font-size: 2.5rem;
         margin: 2rem;
@@ -451,10 +473,16 @@ button {
           padding: 3rem;
         }
       }
+      .photo {
+        width: 50%;
+        height: auto;
+      }
+      .photo.bottom {
+        display: none;
+      }
     }
     @media only screen and (min-width: 1025px) {
       width: 90%;
-      margin-top: 3rem;
       h2 {
         font-size: 3rem;
         margin: 3rem;
@@ -463,6 +491,17 @@ button {
         width: 50%;
         max-width: 900px;
         padding: 3rem;
+      }
+      .about-right {
+        width: 40%;
+      }
+      .about-me {
+        width: 100%;
+        height: 50%;
+        align-self: center;
+      }
+      .photo.top {
+        display: none;
       }
     }
   }

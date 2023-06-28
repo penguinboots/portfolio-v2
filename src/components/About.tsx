@@ -1,4 +1,6 @@
 import wave from "../assets/bottom_wave.svg";
+import photo from "../assets/profile_photo.png";
+
 import { ReactSVG } from "react-svg";
 
 export default function About() {
@@ -7,6 +9,7 @@ export default function About() {
       <ReactSVG className="wave" src={wave} />
       <div className="about-content">
         <h2>A little about me...</h2>
+        <img className="photo top" src={photo} />
         <div className="card-container">
           <div className="card timeline">
             <div className="timeline-item">
@@ -59,12 +62,27 @@ export default function About() {
               <h3>🎓 Graduated x2!</h3>
               <p>
                 I've just graduated from both Lighthouse Labs and UBC (with
-                distinction!), and am looking for my next challenge!
+                distinction!), and am looking for my next big thing!
               </p>
             </div>
           </div>
-          <div className="card about-me">
-            <h3>but wait.. there's more!</h3>
+          <div className="about-right">
+            <img className="photo bottom" src={photo} />
+            <div className="card about-me">
+              <h3>but wait.. there's more!</h3>
+              <p>
+                I'm an artist, and love all things art & design (especially when
+                they're edible). I'm dedicated to creating beautiful things in
+                all that I do - illustration, ceramics, textile arts, pastry...
+                and even code!
+              </p>
+              <p>
+                I have an absolutely crippling fear of heights... but learned to
+                snowboard two seasons ago and love it! ...When I'm done
+                hyperventilating, that is...
+              </p>
+              <p>My favourite animal is penguins.</p>
+            </div>
           </div>
         </div>
       </div>
