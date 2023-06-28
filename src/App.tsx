@@ -11,6 +11,7 @@ import moon from "./assets/moon.png";
 import mountainFront from "./assets/mountains_front.png";
 import mountainBack from "./assets/mountains_behind.png";
 import welcome from "./assets/welcome.svg"
+import Intro from "./components/Intro";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +49,8 @@ useEffect(() => {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero />
       <Menu menuOpen={menuOpen} />
-      <Placeholder />
+      <Intro />
+      <Placeholder color="#7597de" />
     </div>
   );
 }
