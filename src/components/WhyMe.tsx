@@ -31,7 +31,7 @@ export default function WhyMe() {
           </div>
           <div className="card reason-me">
             <FontAwesomeIcon icon={faCircleQuestion} />
-            <h3>Fast and Curious Learner</h3>
+            <h3>Endless Curiosity, Fast Learner</h3>
             <p>
               My ability to learn is one of my greatest strengths. I have a
               passion for acquiring new knowledge and skills, and quickly grasp
