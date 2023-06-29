@@ -708,35 +708,47 @@ button {
   }
   .reasons-me-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    .reasons-me-line {
+      display: flex;
+    }
     .reason-me {
-      width: 25%;
-      max-width: 400px;
-      height: 20rem;
-      padding: 2rem;
-      gap: 1rem;
+      padding: 2.5rem;
+      align-items: center;
+      margin: 1rem;
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
       h3 {
         text-align: center;
         line-height: 1.5rem;
+        margin: 1rem;
+      }
+      p {
+        margin: 0.5rem 0;
       }
     }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-      flex-direction: column;
-      align-items: center;
-      width: 90%;
-      .reason-me {
-        width: 100%;
+      .reasons-me-line {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
       }
     }
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      flex-direction: column;
-      align-items: center;
-      width: 50%;
-      .reason-me {
-        width: 100%;
+      .reasons-me-line {
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
       }
+    }
+    @media only screen and (min-width: 1024px) {
+      width: 70%;
     }
   }
   .bonus {
@@ -744,7 +756,7 @@ button {
     align-items: center;
     padding: 2rem;
     width: 45%;
-    height: 10rem;
     margin: 2rem;
+    gap: 1rem;
   }
 }
