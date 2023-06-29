@@ -70,14 +70,4 @@ const tweeter: Project = {
   stack: ["jquery", "ajax", "express"],
 };
 
-const projects: Project[] = [
-  portfolio,
-  mimikyu,
-  shortly,
-  jungle,
-  scheduler,
-  bytes,
-  tweeter,
-];
-
 export { portfolio, mimikyu, shortly, jungle, scheduler, bytes, tweeter };
