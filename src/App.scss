@@ -739,6 +739,9 @@ button {
         align-items: center;
         width: 90%;
       }
+      .reason-me {
+        padding: 1.5rem;
+      }
     }
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       .reasons-me-line {
@@ -758,5 +761,10 @@ button {
     width: 45%;
     margin: 2rem;
     gap: 1rem;
+    background-color: rgb(228, 200, 170);
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 80%;
+      padding: 1.5rem;
+    }
   }
 }

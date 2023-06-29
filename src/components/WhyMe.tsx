@@ -75,7 +75,7 @@ export default function WhyMe() {
       <div className="card bonus">
         <h3>
           <FontAwesomeIcon icon={faStar} spin />
-          <span> extra prizes </span>
+          <span> bonus points </span>
           <FontAwesomeIcon icon={faStar} spin />
         </h3>
         <p>
