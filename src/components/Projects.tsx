@@ -8,6 +8,8 @@ import {
   bytes,
 } from "../../data/projects.ts";
 import ProjectCard from "./ProjectCard";
+import wave from "../assets/wave_2.svg";
+import { ReactSVG } from "react-svg";
 
 // const projects = [mimikyu, shortly, bytes, portfolio, jungle, scheduler];
 export default function Projects() {
@@ -46,6 +48,7 @@ export default function Projects() {
       >
         {projectCards}
       </Carousel>
+      <ReactSVG className="wave" src={wave} />
     </div>
   );
 }

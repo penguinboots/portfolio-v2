@@ -13,6 +13,7 @@ import welcome from "./assets/welcome.svg"
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import WhyYou from "./components/WhyYou";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,6 +54,7 @@ useEffect(() => {
       <Intro />
       <About/>
       <Projects />
+      <WhyYou />
     </div>
   );
 }

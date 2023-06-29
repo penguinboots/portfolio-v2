@@ -26,7 +26,7 @@ h1 {
 }
 h2 {
   font-family: $title-font;
-  color: #631d36;
+  color: #000000b6;
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 1.8rem;
   }
@@ -40,7 +40,7 @@ h2 {
 h3 {
   font-family: $time-font;
   font-size: 1.5rem;
-  color: #631d36;
+  color: #000000b6;
 }
 p {
   font-family: $body-font;
@@ -429,6 +429,9 @@ button {
         font-size: 1.2rem;
         color: $soft-mauve;
       }
+      h3 {
+        color: #631d36;
+      }
       p {
         font-weight: 500;
         font-size: 1rem;
@@ -522,15 +525,16 @@ button {
 // PROJECTS
 .projects-container {
   background: linear-gradient(to bottom, #ffeab4, #bbca9b);
-  padding-bottom: 4rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   .carousel-container {
     width: 80%;
     margin: auto;
   }
-  .projects {
+  .project {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -621,6 +625,43 @@ button {
   @media only screen and (min-width: 1025px) {
     .carousel-container {
       width: 80%;
+    }
+  }
+  .wave {
+    width: 100%;
+    height: auto;
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 300%;
+    }
+  }
+}
+
+// WHY YOU
+.why-you {
+  // background: linear-gradient(to bottom, #bbca9b, #679466);
+  background-color: #fef7e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .reasons-container {
+    margin: auto;
+    .reason {
+      margin: 2rem 0;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 90%;
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      width: 80%;
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 }
