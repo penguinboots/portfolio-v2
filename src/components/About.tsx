@@ -1,4 +1,4 @@
-import wave from "../assets/bottom_wave.svg";
+import wave from "../assets/wave_1.svg";
 import photo from "../assets/profile_photo.png";
 
 import { ReactSVG } from "react-svg";

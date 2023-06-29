@@ -17,7 +17,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   });
 
   return (
-    <div className="card projects">
+    <div className="card project">
       <div className="placeholder project-img">{`< 🚧 Under Construction 🚧 >`}</div>
       <div className="title-box">
         <h3>{project.title}</h3>
