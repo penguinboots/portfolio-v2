@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { convertRemToPixels } from "../../utils/helpers";
+// import { convertRemToPixels } from "../../utils/helpers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
