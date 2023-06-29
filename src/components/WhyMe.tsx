@@ -82,10 +82,6 @@ export default function WhyMe() {
           As a Lighthouse Labs graduate, I come with the ICT Boost wage subsidy,
           funded by the Government of Canada 🍁. Ask me for details!
         </p>
-        <p>
-          Cookies, cakes, hot dog buns? (no, not this one 🌭!) Have you ever had Hawaiian butter
-          mochi? Maybe it's time you tried!
-        </p>
       </div>
     </div>
   );
