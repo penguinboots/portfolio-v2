@@ -15,6 +15,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import WhyYou from "./components/WhyYou";
 import WhyMe from "./components/WhyMe";
+import Skills from "./components/Skills";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -51,12 +52,13 @@ function App() {
       {isLoading && <Landing />}
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero />
-      <Menu menuOpen={menuOpen} />
+      <Menu menuOpen={menuOpen} closeMenu={() => setMenuOpen(false)}/>
       <Intro />
       <About />
       <Projects />
       <WhyYou />
       <WhyMe />
+      <Skills />
     </div>
   );
 }
