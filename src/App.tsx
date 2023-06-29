@@ -12,6 +12,7 @@ import mountainBack from "./assets/mountains_behind.png";
 import welcome from "./assets/welcome.svg"
 import Intro from "./components/Intro";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -51,6 +52,7 @@ useEffect(() => {
       <Menu menuOpen={menuOpen} />
       <Intro />
       <About/>
+      <Projects />
     </div>
   );
 }
