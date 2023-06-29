@@ -20,6 +20,10 @@ export default function WhyMe() {
             <p>text text</p>
           </div>
         </div>
+          <div className="card bonus">
+            <h3>Bonus!</h3>
+            <p>text text</p>
+          </div>
     </div>
   );
 }
