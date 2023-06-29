@@ -1,6 +1,4 @@
 import { devIcons } from "../assets/icons";
-import { ReactSVG } from "react-svg";
-import blob from "../assets/blob.svg";
 
 export default function Skills() {
   return (
