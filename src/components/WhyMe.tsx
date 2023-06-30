@@ -12,7 +12,7 @@ export default function WhyMe() {
   return (
     <div className="why-me">
       <ReactSVG className="wave" src={wave} />
-      <h2>things you'll love about me</h2>
+      <h2>things you'd love about me</h2>
       <div className="reasons-me-container">
         <div className="reasons-me-line">
           <div className="card reason-me">
