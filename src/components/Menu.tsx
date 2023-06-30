@@ -1,19 +1,21 @@
 import { Link } from "react-scroll";
-// import { convertRemToPixels } from "../../utils/helpers";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 interface MenuProps {
   menuOpen: boolean;
   closeMenu: () => void;
+  navColor: string;
 }
 
 const Menu: React.FC<MenuProps> = (props) => {
-  const { menuOpen, closeMenu } = props;
+  const { menuOpen, closeMenu, navColor } = props;
+
   return (
-    <div className={`menu-wrapper ${menuOpen ? "" : "closed"}`}>
+    <div className={`menu-wrapper ${menuOpen ? "" : "hidden"}`}>
       <ul className="menu-list">
-        <li className="menu-item">
+        <li
+          className="menu-item"
+          style={{ color: navColor, transition: "color 0.3s ease" }}
+        >
           <Link
             to="app-wrapper"
             spy={true}
@@ -24,7 +26,10 @@ const Menu: React.FC<MenuProps> = (props) => {
             welcome
           </Link>
         </li>
-        <li className="menu-item">
+        <li
+          className="menu-item"
+          style={{ color: navColor, transition: "color 0.3s ease" }}
+        >
           <Link
             to="about"
             spy={true}
@@ -35,7 +40,10 @@ const Menu: React.FC<MenuProps> = (props) => {
             about me
           </Link>
         </li>
-        <li className="menu-item">
+        <li
+          className="menu-item"
+          style={{ color: navColor, transition: "color 0.3s ease" }}
+        >
           <Link
             to="projects-container"
             spy={true}
@@ -46,7 +54,10 @@ const Menu: React.FC<MenuProps> = (props) => {
             projects
           </Link>
         </li>
-        <li className="menu-item">
+        <li
+          className="menu-item"
+          style={{ color: navColor, transition: "color 0.3s ease" }}
+        >
           <Link
             to="why-you"
             spy={true}
@@ -57,7 +68,10 @@ const Menu: React.FC<MenuProps> = (props) => {
             you & me
           </Link>
         </li>
-        <li className="menu-item">
+        <li
+          className="menu-item"
+          style={{ color: navColor, transition: "color 0.3s ease" }}
+        >
           <Link
             to="skills-wrapper"
             spy={true}
@@ -67,9 +81,6 @@ const Menu: React.FC<MenuProps> = (props) => {
           >
             my stack
           </Link>
-        </li>
-        <li className="menu-item close" onClick={closeMenu}>
-          <FontAwesomeIcon icon={faXmark} />
         </li>
       </ul>
     </div>

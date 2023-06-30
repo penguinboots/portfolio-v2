@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Menu from "./components/Menu";
 import Landing from "./components/Landing";
-
 import stars from "./assets/stars.png";
 import moon from "./assets/moon.png";
 import mountainFront from "./assets/mountains_front.png";
@@ -52,7 +50,6 @@ function App() {
       {isLoading && <Landing />}
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero />
-      <Menu menuOpen={menuOpen} closeMenu={() => setMenuOpen(false)}/>
       <Intro />
       <About />
       <Projects />
