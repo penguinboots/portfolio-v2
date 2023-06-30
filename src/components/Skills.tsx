@@ -1,4 +1,6 @@
 import { devIcons } from "../assets/icons";
+import wave from "../assets/wave_5.svg";
+import { ReactSVG } from "react-svg";
 
 export default function Skills() {
   return (
@@ -78,6 +80,7 @@ export default function Skills() {
           </li>
         </ul>
       </div>
+      <ReactSVG className="wave" src={wave} />
     </section>
   );
 }

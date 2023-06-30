@@ -14,6 +14,7 @@ import Projects from "./components/Projects";
 import WhyYou from "./components/WhyYou";
 import WhyMe from "./components/WhyMe";
 import Skills from "./components/Skills";
+import CallToAction from "./components/CallToAction";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,6 +57,7 @@ function App() {
       <WhyYou />
       <WhyMe />
       <Skills />
+      <CallToAction />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { ReactSVG } from "react-svg";
 import glow from "../assets/glow_balls.svg";
 
 import { TypeAnimation } from "react-type-animation";
+import ContactIcons from "./ContactIcons";
 
 export default function Intro() {
   return (
@@ -29,6 +30,7 @@ export default function Intro() {
             <h2>letter.</h2>
           </div>
           <h2>My way of showing you just how much I care.</h2>
+          <ContactIcons />
         </div>
         <FontAwesomeIcon className="heart lower" icon={faHeart} beat />
       </div>
