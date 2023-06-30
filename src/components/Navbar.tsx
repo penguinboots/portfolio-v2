@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       const isVisible = prevScrollPos > currentScrollPos;
-      const navThreshold = 1700;
+      const navThreshold = 1600;
       const menuThreshold = 1300;
 
       setPrevScrollPos(currentScrollPos);
