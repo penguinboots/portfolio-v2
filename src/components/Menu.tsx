@@ -82,6 +82,20 @@ const Menu: React.FC<MenuProps> = (props) => {
             my stack
           </Link>
         </li>
+        <li
+          className="menu-item"
+          style={{ color: navColor, transition: "color 0.3s ease" }}
+        >
+          <Link
+            to="call-to"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={closeMenu}
+          >
+            contact
+          </Link>
+        </li>
       </ul>
     </div>
   );

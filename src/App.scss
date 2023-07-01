@@ -899,6 +899,7 @@ button {
     }
     .phone-container.open {
       width: 24rem;
+      cursor: default;
     }
     .phone-ring {
       transform: rotate(135deg);
