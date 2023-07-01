@@ -861,28 +861,23 @@ button {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    .heart {
-      font-size: 3rem;
-      color: #d09baf;
-      width: 100%;
-      margin: 2rem 0;
-    }
     h1 {
       text-align: center;
     }
     .phone-container {
-      font-size: 3.5rem;
       background-color: #d09baf;
-      border: 4px solid rgba(255, 255, 255, 0.496);
       color: $text-color;
       margin: 2rem;
+      padding: 1rem 2rem;
+      gap: 2rem;
+      border-radius: 2rem;
+      border: 4px solid rgba(255, 255, 255, 0.496);
       display: flex;
       align-items: center;
-      padding: 1rem 2rem;
-      border-radius: 2rem;
-      gap: 2rem;
       transition: all ease 1s;
       overflow: hidden;
+      font-size: 3.5rem;
+      height: 6.5rem;
       h3 {
         white-space: nowrap;
         margin: 0;
@@ -890,14 +885,36 @@ button {
         line-height: 1.7rem;
       }
     }
-    .phone-ring {
-      transform: rotate(135deg);
-    }
     .phone-container.ringing {
       width: 8rem;
     }
     .phone-container.open {
       width: 24rem;
+    }
+    .phone-ring {
+      transform: rotate(135deg);
+      transition: all ease 1s;
+    }
+    .phone-noring {
+      opacity: 0;
+    }
+    @keyframes fadeInLate {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .phone-noring.fade-in-late {
+      animation: fadeInLate 1s ease-in-out 1s forwards;
+    }
+    .phone-ring.spin-out {
+      transform: rotate(0);
+      position: absolute;
     }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
       width: 80%;
@@ -911,6 +928,7 @@ button {
         font-size: 2.5rem;
         gap: 1rem;
         max-width: 200px;
+        padding: 0.5rem;
         h3 {
           font-size: 1.5rem;
           line-height: 1.5rem;
@@ -922,7 +940,7 @@ button {
       }
       .phone-container.open {
         width: 70%;
-        height: 8.5rem;
+        height: 9.5rem;
       }
     }
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
