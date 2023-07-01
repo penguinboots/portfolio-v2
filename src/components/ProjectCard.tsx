@@ -20,7 +20,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <div className="card project">
       <div className="placeholder project-img">
-        {project.image ? <img src={`/projects/${project.image}`}  /> : `< 🚧 Under Construction 🚧 >`}
+        {project.image ? <img src={project.image}  /> : `< 🚧 Under Construction 🚧 >`}
       </div>
       <div className="title-box">
         <h3>{project.title}</h3>
