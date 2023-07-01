@@ -40,6 +40,7 @@ export default function CallToAction() {
         </button>
         {/* <FontAwesomeIcon className="heart upper" icon={faHeart} beat /> */}
         <ContactIcons />
+        <p>© 2023 Sabrina Wang</p>
       </div>
     </div>
   );
