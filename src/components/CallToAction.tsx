@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHeart,
   faPhone,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +20,9 @@ export default function CallToAction() {
           onClick={() => setRinging(false)}
         >
           {ringing ? (
-            <FontAwesomeIcon icon={faPhone} shake className="phone-ring" />
+            <div className="phone-ring">
+              <FontAwesomeIcon icon={faPhone} shake />
+            </div>
           ) : (
             <>
               <FontAwesomeIcon

@@ -890,6 +890,9 @@ button {
         line-height: 1.7rem;
       }
     }
+    .phone-ring {
+      transform: rotate(135deg);
+    }
     .phone-container.ringing {
       width: 8rem;
     }
