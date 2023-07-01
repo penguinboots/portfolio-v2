@@ -14,7 +14,7 @@ export default function CallToAction() {
         <h1>I think we'd be a perfect match...</h1>
         <button
           className={`phone-container ${ringing ? "ringing" : "open"}`}
-          onClick={() => setRinging((prev) => !prev)}
+          onClick={() => setRinging(false)}
         >
           {ringing ? (
             <div className="phone-ring">
