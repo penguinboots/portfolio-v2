@@ -1,8 +1,8 @@
-import mimikyuImg from "../projects/mimikyu.png"
-import bytesImg from "../projects/bytes.png";
-import jungleImg from "../projects/jungle.png";
-import schedulerImg from "../projects/scheduler.png";
-import shortlyImg from "../projects/shortly.png"
+import mimikyuImg from "../src/assets/projects/mimikyu.png"
+import bytesImg from "../src/assets/projects/bytes.png";
+import jungleImg from "../src/assets/projects/jungle.png";
+import schedulerImg from "../src/assets/projects/scheduler.png";
+import shortlyImg from "../src/assets/projects/shortly.png";
 
 interface Project {
   title: string;
@@ -35,7 +35,7 @@ const mimikyu: Project = {
 const shortly: Project = {
   title: "Shortly",
   image: shortlyImg,
-  description: "Frontend Mentor Challenge: URL Shortener. Views for desktop, tablet, and mobile.",
+  description: "URL Shortener using shrtco.de API. Views for desktop, tablet, and mobile.",
   live: "https://shortly-url-shortener-five.vercel.app",
   repo: "https://github.com/penguinboots/url-shortener",
   stack: ["react", "sass", "vite", "vercel"],
