@@ -18,8 +18,9 @@ const portfolio: Project = {
 
 const mimikyu: Project = {
   title: "Mimikyu's Day Off",
-  image: "",
-  description: "Capstone Project: A pokemon-themed roguelite game. Art and design by me.",
+  image: "mimikyu.png",
+  description:
+    "Capstone Project: A pokemon-themed roguelite game. Art and design by me.",
   live: "https://mimikyus-day-off.vercel.app",
   repo: "https://github.com/penguinboots/poke-rogue",
   stack: ["react", "next", "node", "sass", "prisma", "vercel"],
@@ -27,7 +28,7 @@ const mimikyu: Project = {
 
 const shortly: Project = {
   title: "Shortly",
-  image: "",
+  image: "shortly.png",
   description: "Frontend Mentor Challenge: URL Shortener. Views for desktop, tablet, and mobile.",
   live: "https://shortly-url-shortener-five.vercel.app",
   repo: "https://github.com/penguinboots/url-shortener",
@@ -36,7 +37,7 @@ const shortly: Project = {
 
 const jungle: Project = {
   title: "Jungle",
-  image: "",
+  image: "jungle.png",
   description: "A mini e-commerce app. Adding features to an existing codebase.",
   live: "",
   repo: "https://github.com/penguinboots/jungle-rails",
@@ -45,7 +46,7 @@ const jungle: Project = {
 
 const scheduler: Project = {
   title: "Interview Scheduler",
-  image: "",
+  image: "scheduler.png",
   description: "Single-page React application to schedule interviews.",
   live: null,
   repo: "https://github.com/penguinboots/scheduler",
@@ -54,7 +55,7 @@ const scheduler: Project = {
 
 const bytes: Project = {
   title: "Bytes Restaurant",
-  image: "",
+  image: "bytes.png",
   description: "Midterm Group Project: A full-stack food-pickup app with Twilio integration.",
   live: null,
   repo: "https://github.com/penguinboots/bytes-restaurant",

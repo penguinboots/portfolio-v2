@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
+
 interface Project {
   title: string;
   image: string;
@@ -18,7 +19,9 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
   return (
     <div className="card project">
-      <div className="placeholder project-img">{`< 🚧 Under Construction 🚧 >`}</div>
+      <div className="placeholder project-img">
+        {project.image ? <img src={`/projects/${project.image}`}  /> : `< 🚧 Under Construction 🚧 >`}
+      </div>
       <div className="title-box">
         <h3>{project.title}</h3>
         <ul className="links">
