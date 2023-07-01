@@ -867,12 +867,59 @@ button {
       width: 100%;
       margin: 2rem 0;
     }
+    h1 {
+      text-align: center;
+    }
+    .phone-container {
+      font-size: 3.5rem;
+      background-color: #d09baf;
+      border: 4px solid rgba(255, 255, 255, 0.496);
+      color: $text-color;
+      margin: 2rem;
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      gap: 2rem;
+      transition: all ease 1s;
+      overflow: hidden;
+      h3 {
+        white-space: nowrap;
+        margin: 0;
+        font-size: 2rem;
+        line-height: 1.7rem;
+      }
+    }
+    .phone-container.ringing {
+      width: 8rem;
+    }
+    .phone-container.open {
+      width: 24rem;
+    }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
       width: 80%;
       h1 {
         font-size: 2.5rem;
         line-height: 2rem;
         margin: 2rem 0;
+      }
+      .phone-container {
+        flex-direction: column;
+        font-size: 2.5rem;
+        gap: 1rem;
+        max-width: 200px;
+        h3 {
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+        }
+      }
+      .phone-container.ringing {
+        width: 70%;
+        height: 5rem;
+      }
+      .phone-container.open {
+        width: 70%;
+        height: 8.5rem;
       }
     }
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
