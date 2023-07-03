@@ -698,9 +698,19 @@ button {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      align-items: center;
       position: relative;
       .reason-you {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         margin: 1rem 0;
+        gap: 1rem;
+      }
+      .reason-summary {
+        width: 90%;
+        text-align: center;
+        margin: 2rem;
       }
       @media only screen and (min-width: 320px) and (max-width: 767px) {
         width: 80%;
@@ -711,10 +721,10 @@ button {
       @media only screen and (min-width: 768px) {
         width: 70%;
         h3 {
-          font-size: 2rem;
+          font-size: 1.8rem;
         }
         p {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
         }
       }
     }
