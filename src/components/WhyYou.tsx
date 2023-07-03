@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { XYZ } from "@fortawesome/free-solid-svg-icons";
+
 export default function WhyYou() {
   return (
     <div className="why-you">
@@ -25,6 +28,8 @@ export default function WhyYou() {
               things things things some more things
             </p>
           </div>
+          <h3 className="reason-summary">Summary summary summary</h3>
+          {/* <FontAwesomeIcon icon={XYZ} style={{ fontSize: "4rem" }} /> */}
         </div>
       </div>
     </div>
