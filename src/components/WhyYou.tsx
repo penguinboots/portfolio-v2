@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { XYZ } from "@fortawesome/free-solid-svg-icons";
 
 export default function WhyYou() {
