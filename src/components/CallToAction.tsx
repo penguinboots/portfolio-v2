@@ -11,7 +11,7 @@ export default function CallToAction() {
     <div className="call-to">
       <ReactSVG className="glow" src={glow} />
       <div className="call-content">
-        <h1>I think we'd be a perfect match...</h1>
+        <h1>if you want to work together...</h1>
         <button
           className={`phone-container ${ringing ? "ringing" : "open"}`}
           onClick={() => setRinging(false)}
