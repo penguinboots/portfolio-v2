@@ -18,6 +18,11 @@ import jest from "./dev_jest.svg";
 import cypress from "./dev_cypress.svg";
 import rspec from "./dev_rspec.svg";
 import next from "./dev_next.svg";
+import java from "./dev_java.svg";
+import ts from "./dev_ts.svg";
+import tw from "./dev_tw.svg";
+import vercel from "./dev_vercel.svg";
+import ps from "./dev_ps.svg";
 
 export const devIcons = {
   css,
@@ -40,4 +45,9 @@ export const devIcons = {
   cypress,
   rspec,
   next,
+  java,
+  ts,
+  tw,
+  vercel,
+  ps
 };
