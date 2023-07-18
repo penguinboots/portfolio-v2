@@ -4,7 +4,7 @@ import {
   faHandshake,
   faCircleQuestion,
 } from "@fortawesome/free-regular-svg-icons";
-import { faTrophy, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import wave from "../assets/wave_3.svg";
 import { ReactSVG } from "react-svg";
 
@@ -71,17 +71,6 @@ export default function WhyMe() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="card bonus">
-        <h3>
-          <FontAwesomeIcon icon={faStar} spin />
-          <span> bonus points </span>
-          <FontAwesomeIcon icon={faStar} spin />
-        </h3>
-        <p>
-          As a Lighthouse Labs graduate, I come with the ICT Boost wage subsidy,
-          funded by the Government of Canada 🍁. Ask me for details!
-        </p>
       </div>
     </div>
   );

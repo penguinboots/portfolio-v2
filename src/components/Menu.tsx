@@ -59,20 +59,6 @@ const Menu: React.FC<MenuProps> = (props) => {
           style={{ color: navColor, transition: "color 0.3s ease" }}
         >
           <Link
-            to="why-you"
-            spy={true}
-            smooth={true}
-            duration={500}
-            onClick={closeMenu}
-          >
-            you & me
-          </Link>
-        </li>
-        <li
-          className="menu-item"
-          style={{ color: navColor, transition: "color 0.3s ease" }}
-        >
-          <Link
             to="skills-wrapper"
             spy={true}
             smooth={true}

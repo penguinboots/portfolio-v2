@@ -11,12 +11,9 @@ import welcome from "./assets/welcome.svg";
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import WhyYou from "./components/WhyYou";
 import WhyMe from "./components/WhyMe";
 import Skills from "./components/Skills";
 import CallToAction from "./components/CallToAction";
-import Experiences from "./components/Experiences";
-
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,6 +53,8 @@ function App() {
       <Intro />
       <About />
       <Projects />
+      <div style={{ height: "10rem", backgroundColor: "#fef7e6" }}>
+      </div>
       <WhyMe />
       <Skills />
       <CallToAction />
