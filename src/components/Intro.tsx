@@ -14,7 +14,7 @@ export default function Intro() {
       <div className="intro-content">
         <div className="intro-title">
           <FontAwesomeIcon className="heart upper" icon={faHeart} beat />
-          <h1>hello, company_name</h1>
+          <h1>hello there,</h1>
         </div>
         <div className="intro-body">
           <h2>I'm Sabrina.</h2>
@@ -22,14 +22,13 @@ export default function Intro() {
             <h2>This is my</h2>
             <TypeAnimation
               className="typed"
-              sequence={["love", 1000, "cover", 1000]}
+              sequence={["portfolio.", 1000, "website.", 1000, "art project.", 1000]}
               wrapper="h2"
               speed={50}
               repeat={Infinity}
             />
-            <h2>letter.</h2>
           </div>
-          <h2>My way of showing you just how much I care.</h2>
+          <h2>Take a look at what makes me tick!</h2>
           <ContactIcons />
         </div>
         <FontAwesomeIcon className="heart lower" icon={faHeart} beat />
