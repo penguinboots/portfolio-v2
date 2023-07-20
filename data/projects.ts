@@ -3,6 +3,7 @@ import bytesImg from "../src/assets/projects/bytes.png";
 import jungleImg from "../src/assets/projects/jungle.png";
 import schedulerImg from "../src/assets/projects/scheduler.png";
 import shortlyImg from "../src/assets/projects/shortly.png";
+import messengerImg from "../src/assets/projects/messenger.png"
 
 interface Project {
   title: string;
@@ -12,6 +13,16 @@ interface Project {
   repo: string;
   stack: string[];
 }
+
+const messenger: Project = {
+  title: "Lil Messenger Clone",
+  image: messengerImg,
+  description:
+    "Full-stack, real-time Messenger clone with read-receipts, group chats, and more.",
+  live: "https://lil-messenger-clone.vercel.app/",
+  repo: "https://github.com/penguinboots/lil-messenger-clone",
+  stack: ["react", "next", "typescript", "tailwind", "prisma", "mongodb"],
+};
 
 const portfolio: Project = {
   title: "Portfolio Website",
@@ -77,4 +88,4 @@ const tweeter: Project = {
   stack: ["jquery", "ajax", "express"],
 };
 
-export { portfolio, mimikyu, shortly, jungle, scheduler, bytes, tweeter };
+export { portfolio, mimikyu, shortly, jungle, scheduler, bytes, tweeter, messenger };

@@ -6,6 +6,7 @@ import {
   jungle,
   scheduler,
   bytes,
+  messenger
 } from "../../data/projects.ts";
 import ProjectCard from "./ProjectCard";
 import wave from "../assets/wave_2.svg";
@@ -13,7 +14,7 @@ import { ReactSVG } from "react-svg";
 
 // const projects = [mimikyu, shortly, bytes, portfolio, jungle, scheduler];
 export default function Projects() {
-  const projects = [mimikyu, shortly, bytes, jungle, scheduler];
+  const projects = [mimikyu, messenger, shortly, bytes, jungle, scheduler];
   const responsive = {
     desktopLarge: {
       breakpoint: { max: 3000, min: 1600 },
